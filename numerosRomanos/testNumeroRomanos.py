@@ -65,8 +65,29 @@ class Test(unittest.TestCase):
         self.assertRaises(AssertionError,convertirRomano, 'VX')
         self.assertRaises(AssertionError,convertirRomano, 'DM') 
         self.assertRaises(AssertionError,convertirRomano, 'LC')
-       
-       
+    
+    def testMenorAMayor(self):
+        #self.assertRaises(AssertionError, convertirRomano,'IVM')
+        #self.assertRaises(AssertionError, convertirRomano,'XXL')
+        #self.assertRaises(AssertionError, convertirRomano,'VIV')
+        self.assertRaises(AssertionError, convertirRomano,'IXVI')
+        
+    def testConteo(self):   
+        self.assertEqual(convertirRomano('I'), 1)
+        self.assertEqual(convertirRomano('II'), 2)
+        self.assertEqual(convertirRomano('III'), 3)
+        self.assertEqual(convertirRomano('IV'), 4)
+        self.assertEqual(convertirRomano('V'), 5)
+        self.assertEqual(convertirRomano('VI'), 6)
+        self.assertEqual(convertirRomano('IX'), 9)
+        self.assertEqual(convertirRomano('XIX'), 19)
+        self.assertEqual(convertirRomano('XXI'), 21)
+        self.assertEqual(convertirRomano('XXV'), 25)
+        self.assertEqual(convertirRomano('XC'), 90)
+        self.assertEqual(convertirRomano('XCIX'), 99)
+        self.assertEqual(convertirRomano('CM'), 900)
+        self.assertEqual(convertirRomano('MMM'), 3000)
+        self.assertEqual(convertirRomano('IVM'), 1004)
        
        
        
