@@ -55,6 +55,11 @@ class Test(unittest.TestCase):
         self.assertRaises(AssertionError,convertirRomano, 'LLL')
         self.assertRaises(AssertionError,convertirRomano, 'DD')
        
+    def testRestaTipo1Tipo5(self):
+        self.assertRaises(AssertionError,convertirRomano, 'IL')
+        self.assertRaises(AssertionError,convertirRomano, 'IM') 
+        self.assertRaises(AssertionError,convertirRomano, 'XD')
+        self.assertRaises(AssertionError,convertirRomano, 'XM')
        
        
        
@@ -68,10 +73,14 @@ class Test(unittest.TestCase):
        
        
        
-       
-       
-       
-       
+      
+      
+      
+      
+      
+      
+      
+      
        
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

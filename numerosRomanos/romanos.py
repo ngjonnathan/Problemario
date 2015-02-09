@@ -13,6 +13,7 @@ def convertirRomano(numero):
         if (i < tam-1):
             sig  = romanos[numero[i+1]]
             if (valorActual < sig):
+                assert(valorActual*10 >= sig)
                 entero +=  sig - valorActual 
                 i+= 2    # Saltar hasta 2 caracteres por la resta
                 continue
