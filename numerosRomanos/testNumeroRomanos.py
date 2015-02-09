@@ -51,8 +51,9 @@ class Test(unittest.TestCase):
         self.assertRaises(AssertionError,convertirRomano, 'XVVVIIII')
        
     def testRepeticionesTipo5(self):
-        self.assertRaises(AssertionError,convertirRomano, 'CC')
+        self.assertRaises(AssertionError,convertirRomano, 'VV')
         self.assertRaises(AssertionError,convertirRomano, 'LLL')
+        self.assertRaises(AssertionError,convertirRomano, 'DD')
        
        
        
