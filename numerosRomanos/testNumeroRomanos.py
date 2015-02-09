@@ -35,12 +35,24 @@ class Test(unittest.TestCase):
     def testSuma(self):
         self.assertEqual(convertirRomano('II'), 2)
         self.assertEqual(convertirRomano('XX'), 20)
-        self.assertEqual(convertirRomano('CC'), 200)    
-        self.assertEqual(convertirRomano('MM'), 2000)
+        self.assertEqual(convertirRomano('VII'), 7)    
+        self.assertEqual(convertirRomano('DCI'), 601)
+     
+     
+     
+     
+     
+     
+     
        
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
+    
+    
+    
+    
+    
     
     
     
