@@ -5,7 +5,6 @@ Created on 8/2/2015
 '''
 def convertirRomano(numero):
     romanos = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    
     entero, i = 0, 0
     tam = len(numero)
     ocurr = 1
@@ -15,9 +14,10 @@ def convertirRomano(numero):
             sig  = romanos[numero[i+1]]
             if (valorActual < sig):
                 entero +=  sig - valorActual 
-                i+= 2   # Saltar hasta 2 caracteres por la resta
+                i+= 2    # Saltar hasta 2 caracteres por la resta
                 continue
             elif (valorActual == sig):
+                assert(valorActual+sig not in(romanos.values()))
                 ocurr += 1
             else:
                 ocurr = 1
