@@ -13,17 +13,16 @@ def convertirRomano(numero):
         if (i < tam-1):
             sig  = romanos[numero[i+1]]
             if (valorActual < sig):
-                assert(valorActual*10 >= sig)
-                assert(sig - valorActual != valorActual)
-                entero +=  sig - valorActual 
-                i+= 2    # Saltar hasta 2 caracteres por la resta
-                continue
+                assert(valorActual*10 >= sig)            # Solo se puede restar inmediato mayor
+                assert(sig - valorActual != valorActual) # No se puede restar Tipo 5
+                valorActual =  sig - valorActual 
+                i+= 1    # Saltar hasta 2 caracteres por la resta
             elif (valorActual == sig):
-                assert(valorActual+sig not in(romanos.values()))
+                assert(valorActual+sig not in(romanos.values())) # No se puede repetir Tipo 5
                 ocurr += 1
             else:
                 ocurr = 1
-                
+               
         entero += valorActual
         i += 1
         assert(ocurr < 4)
