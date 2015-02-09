@@ -44,9 +44,33 @@ class Test(unittest.TestCase):
         self.assertEqual(convertirRomano('XL'), 40)
         self.assertEqual(convertirRomano('CM'), 900)
      
-     
-     
-     
+    def testMasTresRepeticionesSeguidas(self):
+        self.assertRaises(AssertionError,convertirRomano,'IIII')
+        self.assertRaises(AssertionError,convertirRomano, 'LXXXX')
+        self.assertRaises(AssertionError,convertirRomano, 'MMMMMM')
+        self.assertRaises(AssertionError,convertirRomano, 'XVVVIIII')
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
