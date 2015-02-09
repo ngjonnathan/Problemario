@@ -9,9 +9,13 @@ def convertirRomano(numero):
     entero, i = 0, 0
     tam = len(numero)
     while i < tam:
-        entero = entero + romanos[numero[i]]
-        i+= 1
-    
+        if (i < tam-1) and (romanos[numero[i]] < romanos[numero[i+1]]):
+            entero +=  romanos[numero[i+1]] - romanos[numero[i]] 
+            i+= 2
+        else:
+            entero += romanos[numero[i]]
+            i+=1
+            
     return entero
 
 

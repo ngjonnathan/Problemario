@@ -38,8 +38,11 @@ class Test(unittest.TestCase):
         self.assertEqual(convertirRomano('VII'), 7)    
         self.assertEqual(convertirRomano('DCI'), 601)
      
-     
-     
+    def testResta(self):
+        self.assertEqual(convertirRomano('IV'), 4)
+        self.assertEqual(convertirRomano('IX'), 9)
+        self.assertEqual(convertirRomano('XL'), 40)
+        self.assertEqual(convertirRomano('CM'), 900)
      
      
      
